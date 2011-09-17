@@ -6,6 +6,9 @@ Uwave::Application.routes.draw do
   get "twilio/call"
 
   get "twilio/text"
+  
+ match ':controller(/:action(.:format))'
+ match ':controller(/:action(/:id(.:format)))'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
