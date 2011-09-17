@@ -26,7 +26,8 @@ class TwilioController < ApplicationController
     data = {
       :from => CALLER_ID,
       :to => params['number'],
-      :url => BASE_URL + '/text.xml',
+      :body => 'This is just a test'
+    #  :url => BASE_URL + '/text.xml',
     }
  
     begin
