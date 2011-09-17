@@ -4,6 +4,8 @@ Uwave::Application.routes.draw do
   get "arduino/gettime"
 
   get "twilio/call"
+  
+  get "twilio/initiate_text"
 
   get "twilio/text"
   
