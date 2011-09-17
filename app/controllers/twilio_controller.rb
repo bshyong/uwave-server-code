@@ -13,6 +13,7 @@ CALLER_ID = 'XXX-XXX-XXXX'
 
 
 class TwilioController < ApplicationController
+    
     def initiate_text
       
        if !params['number']
