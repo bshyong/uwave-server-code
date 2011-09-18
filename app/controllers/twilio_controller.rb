@@ -40,6 +40,6 @@ class TwilioController < ApplicationController
       return
     end
  
-    redirect_to :action => '', 'msg' => "Calling #{params['number']}..."
+    redirect_to :action => '', 'msg' => "Texted #{params['number']}..."
   end
   end

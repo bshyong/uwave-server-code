@@ -1,5 +1,6 @@
 Uwave::Application.routes.draw do
-  get "arduino/settime"
+  get "arduino/start"
+  get "arduino/finish"
 
   get "arduino/gettime"
 
@@ -9,8 +10,15 @@ Uwave::Application.routes.draw do
 
   get "twilio/text"
   
+  get "home/save_twitter"
+  get "home/index"
+  get "home/video"
+  get "home/tweet"
+  
  match ':controller(/:action(.:format))'
  match ':controller(/:action(/:id(.:format)))'
+ 
+ root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

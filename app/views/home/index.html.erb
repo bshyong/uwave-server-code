@@ -1,0 +1,12 @@
+<% if session[:twitter].blank? %>
+<%= form_tag '/home/save_twitter' do %>
+<%= label_tag 'Twitter handle'%>
+<%= text_field_tag :twitter %>
+<%= label_tag 'Phone number'%>
+<%= text_field_tag :phone %>
+<%= submit_tag %>
+<% end %>
+<% else %>
+<h2>Welcome, <%= session[:twitter] %></h2>
+<%= link_to "reset", :controller => 'home', :action => 'reset' %>
+<% end %>

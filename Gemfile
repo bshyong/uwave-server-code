@@ -8,6 +8,10 @@ gem 'rails', '3.0.7'
 gem 'sqlite3'
 
 gem "twilio-ruby"
+
+gem 'twitter'
+gem 'oauth'
+
 #gem "twilio"
 
 # Use unicorn as the web server
