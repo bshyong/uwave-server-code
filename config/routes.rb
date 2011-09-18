@@ -4,16 +4,10 @@ Uwave::Application.routes.draw do
 
   get "arduino/gettime"
 
-  get "twilio/call"
-  
-  get "twilio/initiate_text"
-
-  get "twilio/text"
-  
-  get "home/save_twitter"
+ 
+  get "home/save_info"
   get "home/index"
   get "home/video"
-  get "home/tweet"
   
  match ':controller(/:action(.:format))'
  match ':controller(/:action(/:id(.:format)))'

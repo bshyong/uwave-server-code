@@ -4,9 +4,15 @@
 <%= text_field_tag :twitter %>
 <%= label_tag 'Phone number'%>
 <%= text_field_tag :phone %>
+<%= label_tag 'text me'%>
+<%= check_box_tag :text, true, false %>
 <%= submit_tag %>
 <% end %>
 <% else %>
 <h2>Welcome, <%= session[:twitter] %></h2>
+<%= session.inspect %>
+<!-- <p>
+<%= Net::HTTP.get_response( URI.parse( "http://api.hunch.com/api/v1/get-recommendations?user_id=tw_gleitz&topic_ids=list_web-video"  ) ).body %>	
+</p> -->
 <%= link_to "reset", :controller => 'home', :action => 'reset' %>
 <% end %>
