@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   #TWILIO
     ACCOUNT_SID = 'AC7f1be0408517f1883d7c79c4e82bc40e'
     ACCOUNT_TOKEN = 'a6f4780726c5934cd99de822afddfee5'
-    CALLER_ID = '4155992671'
+    CALLER_ID = '2155864260'
     
   #TWITTER
     CONSUMER_KEY = "iB2lO2A4Ki8urWxkgptaXQ"
@@ -14,11 +14,10 @@ class ApplicationController < ActionController::Base
   
   def text
 
-    
     data = {
       :from => CALLER_ID,
-      :to => session[:phone],
-      :body => 'This is just a test'
+      :to => User.last.phone,
+      :body => 'Your food is done!'
     }
  
    client = Twilio::REST::Client.new(ACCOUNT_SID, ACCOUNT_TOKEN)
@@ -38,8 +37,8 @@ class ApplicationController < ActionController::Base
       config.oauth_token = token
       config.oauth_token_secret = secret 
     end
-   unless session[:twitter].nil?
-    Twitter.update("Just cooked food for " + "@" + session[:twitter] + " @PennApps #pennapps")
+   unless User.last.twitter.nil?
+    Twitter.update(User.last.twitter + " just @uwaved something " + "#pennapps")
     end
   end
   

@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     session[:twitter] = params[:twitter]
     session[:phone] = params[:phone]
     session[:text] = params[:text]
+    User.create(:twitter => params[:twitter], :phone => params[:phone], :text => params[:text])
     redirect_to :action => "index"
   end
   

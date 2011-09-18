@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  phone: MyString
+  twitter: MyString
+  time: 1
+  text: false
+
+two:
+  phone: MyString
+  twitter: MyString
+  time: 1
+  text: false

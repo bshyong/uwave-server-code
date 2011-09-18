@@ -1,5 +1,5 @@
 <% if session[:twitter].blank? %>
-<%= form_tag '/home/save_twitter' do %>
+<%= form_tag '/home/save_info' do %>
 <%= label_tag 'Twitter handle'%>
 <%= text_field_tag :twitter %>
 <%= label_tag 'Phone number'%>
@@ -11,6 +11,9 @@
 <% else %>
 <h2>Welcome, <%= session[:twitter] %></h2>
 <%= session.inspect %>
+<br />
+User
+<%= User.last.inspect %>
 <!-- <p>
 <%= Net::HTTP.get_response( URI.parse( "http://api.hunch.com/api/v1/get-recommendations?user_id=tw_gleitz&topic_ids=list_web-video"  ) ).body %>	
 </p> -->
