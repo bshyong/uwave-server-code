@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     session[:twitter] = params[:twitter]
     session[:phone] = params[:phone]
     session[:text] = params[:text]
+    session[:tweet] = params[:tweet]
     User.create(:twitter => params[:twitter], :phone => params[:phone], :text => params[:text])
     redirect_to :action => "index"
   end
@@ -15,11 +16,6 @@ class HomeController < ApplicationController
   def reset
     reset_session
     redirect_to :root
-  end
-  
-  
-  def video
-    
   end
   
 end

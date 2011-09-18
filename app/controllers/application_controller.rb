@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
       config.oauth_token_secret = secret 
     end
    unless User.last.twitter.nil?
-    Twitter.update(User.last.twitter + " just @uwaved something " + "#pennapps")
+    Twitter.update("@" + User.last.twitter + " just @uwaved something " + "#pennapps")
     end
   end
   

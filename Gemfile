@@ -12,6 +12,8 @@ gem "twilio-ruby"
 gem 'twitter'
 gem 'oauth'
 
+gem 'juggernaut'
+
 #gem "twilio"
 
 # Use unicorn as the web server
